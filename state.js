@@ -1,9 +1,11 @@
 class Weather extends React.Component {
   constructor() {
     super();
-    this.state = {isHot: true};
+    // this.state = {isHot: true};
     this.changeWeather = this.changeWeather.bind(this);
   }
+
+  state = {isHot: true};
 
   changeWeather() {
     // this.state.isHot = !this.state.isHot;
@@ -12,6 +14,8 @@ class Weather extends React.Component {
 
   onClick=() => {
     console.log(this);
+    this.setState({isHot: !this.state.isHot});
+    // this.state.isHot = !this.state.isHot;
   }
 
   render() {
