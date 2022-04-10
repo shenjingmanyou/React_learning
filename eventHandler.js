@@ -1,11 +1,16 @@
 class MyComponent extends React.Component {
+
+  onBlur = (e) => {
+    alert(e.target.value);
+  }
   render() {
     return (
-      <h1>
-        hello world!
-      </h1>
-    )
+      <div>
+        <input type="text" onBlur={this.onBlur}></input>
+      </div>
+    );
   }
 }
+
 
 ReactDOM.render(<MyComponent />, document.querySelector("#root"));
